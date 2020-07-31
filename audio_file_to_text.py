@@ -1,6 +1,6 @@
 #!/usr/bin/env python
+#establish arguments
 import argparse
-
 parser = argparse.ArgumentParser(description='Transcribe audio file into text')
 # Define the arguments
 parser.add_argument('--input_file', '-i', type=str, dest='input_file', required=True, help='path of the input audio file')
@@ -9,7 +9,7 @@ parser.add_argument('--input_language', '-l', type=str, dest='input_language', r
 parser.add_argument('--output_name', '-o', type=str, dest='output_name', required=True, help='path for output text file')
 args = parser.parse_args()
 
-
+#function to take the audio file and transcribe it using google
 def audio_file_to_text(input_file, input_language, output_name):
     if input_language == None:
         print("choose a language to be used")
@@ -29,4 +29,5 @@ def audio_file_to_text(input_file, input_language, output_name):
     audio_file_text_output.write(text)
     audio_file_text_output.close()
 
+#function with the corresponding arguments
 audio_file_to_text(args.input_file, args.input_language, args.output_name)
