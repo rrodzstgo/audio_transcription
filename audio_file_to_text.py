@@ -4,7 +4,7 @@ import argparse
 parser = argparse.ArgumentParser(description='Transcribe audio file into text')
 # Define the arguments
 parser.add_argument('--input_file', '-i', type=str, dest='input_file', required=True, help='path of the input audio file')
-parser.add_argument('--input_language', '-l', type=str, dest='input_language', required=True,
+parser.add_argument('--input_language', '-l', type=str, dest='input_language', required=False,
                     help='language to use to interpret the audio')
 parser.add_argument('--output_name', '-o', type=str, dest='output_name', required=True, help='path for output text file')
 args = parser.parse_args()
