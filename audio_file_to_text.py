@@ -1,3 +1,4 @@
+#!/usr/bin/env python
 import argparse
 
 parser = argparse.ArgumentParser(description='Transcribe audio file into text')
